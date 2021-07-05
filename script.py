@@ -48,9 +48,7 @@ def train_model(Xtrain, ytrain):
     model = Sequential()     #create seq model
     n_cols = X_train.shape[1]  #number of columns
     print(n_cols)
-    
-	#model.add(Dense(1,activation='sigmoid',input_shape=(n_cols,)))    #One input and output layer
-    
+        
     #add layers to model    
     model.add(Dense(n_cols, activation='relu',name ='layer-1',kernel_initializer='random_uniform', input_shape=(n_cols,)))
     model.add(Dropout(0.25))
